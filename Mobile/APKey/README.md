@@ -2,7 +2,9 @@
 Автор: KArtikLESS
 ## Описание задания:
 This app contains some unique keys. Can you get one?
-# Решение 
+## Ссылка на задание:
+https://app.hackthebox.com/challenges/APKey
+# Решение:
 Для решения этого задания необходимо скачать файл APKey.zip, который содержит необходимый для исследования .apk файл.
 
 Команда для распаковки:
@@ -12,7 +14,8 @@ This app contains some unique keys. Can you get one?
 Выбранный эмулятор: Pixel 4 API 29. 
 
 > Вот так выглядит само исследуемое приложение:
-<img width="1480" height="899" alt="image" src="https://github.com/user-attachments/assets/df63b358-c1f1-4501-a2ff-dd26cdbb859c" />
+<img width="1874" height="882" alt="image" src="https://github.com/user-attachments/assets/bef38b79-25a1-490b-8a4c-d0f6230cfe41" />
+
 
 Приложение исходя из своего интерфейса предполагает, что необходимо подобрать правильный логин и пароль для получения флага.
 К слову, эмулятор данной версии был выбран не просто так. При попытке запустить приложение APKey.apk на стандартном мобильном эмуляторе с API 36 версии возникала ошибка, из-за которой установленное приложение не запускалось в режиме Debug.
@@ -105,7 +108,7 @@ public void onClick(android.view.View r5) throws java.security.NoSuchAlgorithmEx
 
 Само по себе условие проверяет пароль в захешированном/зашифрованном виде. Такие выводы можно сделать на оcновании того, как выглядить условие else c выводом теста `Wrong Credentials!` при неудачном вводе пароля.
 
-<img width="444" height="803" alt="image" src="https://github.com/user-attachments/assets/0b24f6fd-ae73-49c6-b4f5-8362a0b6c0f3" />
+<img width="1871" height="895" alt="image" src="https://github.com/user-attachments/assets/359bd9aa-570d-4aca-a85b-ffab0cf5ac64" />
 
 Так что анализ следует проводить непосредственно с методами `c.b.a.b.a(c.b.a.g.a())`, чтобы восстановить логику вывода скрытого текста (искомого флага).
 
@@ -301,6 +304,7 @@ g.a() =
 
 Когда данные не кратны размеру блока (16 байт для AES), добавляется padding. Поэтому при выводе флага стоит это учитывать. Android использует PKCS#5/PKCS#7 по умолчанию.
 
-<img width="1824" height="492" alt="image" src="https://github.com/user-attachments/assets/5b9b68a5-5e71-4b36-9156-949f3cbacfa9" />
+<img width="1816" height="425" alt="image" src="https://github.com/user-attachments/assets/216fc0ab-e649-4fca-8f5e-a94f252bfdea" />
+
 
 Флаг: HTB{m0r3_0bfusc4t1on_w0uld_n0t_hurt}
