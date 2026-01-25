@@ -108,7 +108,7 @@ public void onClick(android.view.View r5) throws java.security.NoSuchAlgorithmEx
 
 Само по себе условие проверяет пароль в захешированном/зашифрованном виде. Такие выводы можно сделать на оcновании того, как выглядить условие else c выводом теста `Wrong Credentials!` при неудачном вводе пароля.
 
-<img width="1871" height="895" alt="image" src="https://github.com/user-attachments/assets/359bd9aa-570d-4aca-a85b-ffab0cf5ac64" />
+<img width="444" height="803" alt="Снимок экрана 2026-01-25 024208" src="https://github.com/user-attachments/assets/668c0663-61f3-4346-8d84-bb6a2fbc1846" />
 
 Так что анализ следует проводить непосредственно с методами `c.b.a.b.a(c.b.a.g.a())`, чтобы восстановить логику вывода скрытого текста (искомого флага).
 
