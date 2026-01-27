@@ -10,7 +10,7 @@ https://app.hackthebox.com/challenges/SAW
 > Install this application in an API Level 29 or later (i.e. Android 10.0).
 
 ## Статический анализ Java кода
-Сначала стоит провести статический анализ данного приложения. Для этого можноиспользовать декомпилятор Jadx. В декомпилированном приложении стоит в первую очередь посмотреть файл манифеста `AndroidManifest.xml`.
+Сначала стоит провести статический анализ данного приложения. Для этого можно использовать декомпилятор JADX. В декомпилированном приложении стоит в первую очередь посмотреть файл манифеста `AndroidManifest.xml`.
 
 > Содержимое файла манифеста приложения:
 ```xml
@@ -248,3 +248,4 @@ if ( v10 )
 <img width="888" height="442" alt="image" src="https://github.com/user-attachments/assets/c3ebf171-35fe-408f-8c3d-c31c3da4fda2" />
 
 Флаг: HTB{SawS0DCLing}
+
